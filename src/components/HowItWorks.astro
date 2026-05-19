@@ -1,0 +1,126 @@
+---
+import type { Lang } from '../i18n/index';
+import { useTranslations } from '../i18n/index';
+import GoalpostAccent from './svg/GoalpostAccent.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+---
+
+<section class="hiw-section">
+  <GoalpostAccent class="hiw-goalpost" />
+
+  <div class="section-inner">
+    <p class="eyebrow reveal" style="margin-bottom: 0.75rem;">{t('compliance.badge')}</p>
+    <h2 class="hiw-heading heading-accent reveal">{t('howItWorks.heading')}</h2>
+
+    <div class="hiw-grid">
+      {[0, 1, 2, 3].map((i) => (
+        <div class="hiw-step reveal">
+          <div class="hiw-step-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div>
+          <div class="hiw-step-content">
+            <div class="hiw-step-connector" aria-hidden="true"></div>
+            <h3 class="hiw-step-title">{t(`howItWorks.steps.${i}.title` as any)}</h3>
+            <p class="hiw-step-desc">{t(`howItWorks.steps.${i}.desc` as any)}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="hiw-cta reveal">
+      <a href="#register" class="btn-primary">{t('hero.ctaPrimary')}</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hiw-section {
+    position: relative;
+    padding: 6rem 0;
+    background: var(--color-navy);
+    overflow: hidden;
+  }
+  .hiw-goalpost {
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .hiw-heading {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 3.5rem;
+  }
+  .hiw-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media (min-width: 768px) {
+    .hiw-grid { grid-template-columns: repeat(2, 1fr); gap: 0 3rem; }
+  }
+  @media (min-width: 1024px) {
+    .hiw-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .hiw-step {
+    position: relative;
+    padding: 1.5rem 0 2.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .hiw-step-num {
+    font-family: var(--font-eyebrow);
+    font-weight: 700;
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(221, 0, 0, 0.2);
+    position: absolute;
+    top: -0.2em;
+    right: 0;
+    pointer-events: none;
+    user-select: none;
+  }
+  .hiw-step-content {
+    position: relative;
+    z-index: 1;
+  }
+  .hiw-step-connector {
+    width: 2px;
+    height: 0;
+    background: var(--color-gold);
+    margin-bottom: 1.25rem;
+    transition: height 0.4s ease;
+  }
+  .hiw-step.in-view .hiw-step-connector {
+    height: 32px;
+  }
+  .hiw-step-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+  }
+  .hiw-step-desc {
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+    max-width: 240px;
+  }
+  @media (max-width: 767px) {
+    .hiw-section { padding: 3.5rem 0; }
+    .hiw-step-desc { max-width: none; }
+  }
+  .hiw-cta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+</style>

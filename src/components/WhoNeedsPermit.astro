@@ -1,0 +1,121 @@
+---
+import type { Lang } from '../i18n/index';
+import { useTranslations } from '../i18n/index';
+import FootballPattern from './svg/FootballPattern.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="who-section">
+  <FootballPattern id="fp-who" opacity={0.06} />
+  <div class="who-bg-pattern" aria-hidden="true"></div>
+
+  <div class="section-inner">
+    <p class="eyebrow reveal" style="margin-bottom: 0.75rem;">{t('compliance.badge')}</p>
+    <h2 class="who-heading heading-accent reveal">{t('who.heading')}</h2>
+
+    <div class="who-grid">
+      <!-- Hospitality -->
+      <article class="who-card reveal">
+        <div class="who-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 22V8l9-6 9 6v14"/><path d="M9 22v-4h6v4"/><rect x="9" y="10" width="2" height="3"/><rect x="13" y="10" width="2" height="3"/>
+          </svg>
+        </div>
+        <h3 class="who-card-title">{t('who.hospitality.title')}</h3>
+        <p class="who-card-desc">{t('who.hospitality.desc')}</p>
+      </article>
+
+      <!-- Venues -->
+      <article class="who-card reveal">
+        <div class="who-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+          </svg>
+        </div>
+        <h3 class="who-card-title">{t('who.venues.title')}</h3>
+        <p class="who-card-desc">{t('who.venues.desc')}</p>
+      </article>
+
+      <!-- Corporate -->
+      <article class="who-card reveal">
+        <div class="who-icon" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h3 class="who-card-title">{t('who.corporate.title')}</h3>
+        <p class="who-card-desc">{t('who.corporate.desc')}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .who-section {
+    position: relative;
+    padding: 6rem 0;
+    background: var(--color-navy-mid);
+    overflow: hidden;
+  }
+  .who-bg-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='104'%3E%3Cpolygon points='45,6 78,24 78,60 45,78 12,60 12,24' fill='none' stroke='rgba(221,0,0,0.06)' stroke-width='1'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  .who-heading {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .who-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  @media (min-width: 640px) {
+    .who-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 960px) {
+    .who-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .who-card {
+    background: var(--color-navy);
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    border-radius: var(--radius-card);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .who-card:hover {
+    border-color: var(--color-border-gold);
+    transform: translateY(-2px);
+  }
+  .who-icon {
+    color: var(--color-gold);
+    margin-bottom: 1.25rem;
+  }
+  .who-card-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+  }
+  .who-card-desc {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    line-height: 1.65;
+  }
+  @media (max-width: 767px) {
+    .who-section { padding: 3.5rem 0; }
+  }
+</style>

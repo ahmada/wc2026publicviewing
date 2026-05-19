@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "wordmark": "TOTAL SPORTS ASIA",
+    "whatsapp": "WhatsApp",
+    "langToggle": "EN"
+  },
+  "hero": {
+    "eyebrow": "PENGENDALI HAK KOMERSIAL RASMI — MALAYSIA",
+    "headline": "Hos Tontonan Awam FIFA World Cup 2026™ di Malaysia",
+    "subhead": "Semua tayangan awam Kejohanan di Malaysia memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia. Daftar di bawah untuk memulakan proses pelesenan anda.",
+    "ctaPrimary": "Mohon Kebenaran Tontonan Awam",
+    "ctaSecondary": "Hubungi Kami di WhatsApp",
+    "countdownLabel": "Hari Sehingga Perlawanan Pertama"
+  },
+  "compliance": {
+    "badge": "PENGENDALI HAK BERLESEN",
+    "heading": "Tontonan awam memerlukan kebenaran bertulis",
+    "body": "Di bawah peraturan FIFA, mana-mana tayangan awam perlawanan FIFA World Cup 2026 di Malaysia — termasuk di restoran, kafe, bar, hotel, pusat beli-belah, zon peminat, ruang komuniti, acara korporat, dan tempat bertikut — memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia sebagai pengendali hak komersial berlesen. Tayangan awam tanpa kebenaran boleh mengakibatkan tindakan penguatkuasaan di bawah undang-undang Malaysia dan rangka kerja hak komersial FIFA."
+  },
+  "who": {
+    "heading": "Siapa Yang Memerlukan Kebenaran?",
+    "hospitality": {
+      "title": "Hospitaliti",
+      "desc": "Outlet F&B, hotel, kafe, lounge"
+    },
+    "venues": {
+      "title": "Tempat & Ruang Awam",
+      "desc": "Pusat beli-belah, zon peminat, dataran awam, limpahan stadium"
+    },
+    "corporate": {
+      "title": "Korporat & Komuniti",
+      "desc": "Pejabat, kondominium, persatuan, NGO, kedutaan"
+    }
+  },
+  "howItWorks": {
+    "heading": "Bagaimana Ia Berfungsi",
+    "steps": [
+      { "title": "Hantar Pendaftaran Anda", "desc": "Lengkapkan borang dalam talian dengan butiran organisasi dan tempat anda." },
+      { "title": "TSA Menyemak Permohonan Anda", "desc": "Pasukan kami akan menyemak tempat, skop, dan penonton yang dimaksudkan." },
+      { "title": "Terima Kebenaran Bertulis Anda", "desc": "Dapatkan kebenaran rasmi bertulis dan syarat pelesenan anda." },
+      { "title": "Hos Tontonan Anda", "desc": "Patuh, disokong, dan layak untuk saluran promosi TSA." }
+    ]
+  },
+  "form": {
+    "sectionHeading": "Daftar untuk Kebenaran",
+    "step1": {
+      "headline": "Mari dapatkan kelulusan tontonan awam anda",
+      "subhead": "Kira-kira 3 minit. Kami akan menghubungi anda dalam masa 3 hari bekerja.",
+      "cta": "Mula"
+    },
+    "step2": {
+      "heading": "Tentang Anda",
+      "fullName": "Nama penuh",
+      "position": "Jawatan / peranan",
+      "email": "E-mel",
+      "phone": "No. telefon (WhatsApp pilihan)"
+    },
+    "step3": {
+      "heading": "Organisasi Anda",
+      "orgName": "Nama perniagaan atau organisasi",
+      "orgType": "Jenis perniagaan",
+      "ssmNumber": "No. pendaftaran SSM / perniagaan (pilihan)",
+      "orgTypes": {
+        "fnb": "Outlet F&B",
+        "hotel": "Hotel",
+        "mall": "Pusat Beli-belah",
+        "fanzone": "Pengendali Zon Peminat",
+        "corporate": "Korporat",
+        "community": "Komuniti atau NGO",
+        "government": "Kerajaan",
+        "other": "Lain-lain"
+      }
+    },
+    "step4": {
+      "heading": "Tempat Anda",
+      "venueName": "Nama tempat (jika berbeza daripada organisasi)",
+      "venueAddress": "Alamat tempat",
+      "state": "Negeri",
+      "capacity": "Kapasiti tempat yang dijangkakan",
+      "screenSetup": "Bilangan skrin dan jenis persediaan (pilihan)",
+      "capacities": {
+        "under-50": "Bawah 50",
+        "50-200": "50–200",
+        "200-500": "200–500",
+        "500-2000": "500–2,000",
+        "2000+": "2,000+"
+      },
+      "states": {
+        "johor": "Johor",
+        "kedah": "Kedah",
+        "kelantan": "Kelantan",
+        "melaka": "Melaka",
+        "negeri-sembilan": "Negeri Sembilan",
+        "pahang": "Pahang",
+        "perak": "Perak",
+        "perlis": "Perlis",
+        "pulau-pinang": "Pulau Pinang",
+        "sabah": "Sabah",
+        "sarawak": "Sarawak",
+        "selangor": "Selangor",
+        "terengganu": "Terengganu",
+        "kuala-lumpur": "Wilayah Persekutuan Kuala Lumpur",
+        "labuan": "Wilayah Persekutuan Labuan",
+        "putrajaya": "Wilayah Persekutuan Putrajaya"
+      }
+    },
+    "step5": {
+      "heading": "Rancangan Tontonan Anda",
+      "matchesPlanned": "Perlawanan yang ingin ditayangkan",
+      "estimatedAudience": "Anggaran penonton setiap hari perlawanan (pilihan)",
+      "matches": {
+        "all": "Semua 104 perlawanan",
+        "group": "Peringkat kumpulan",
+        "r32": "Pusingan 32",
+        "r16": "Pusingan 16",
+        "quarters": "Suku akhir",
+        "semis": "Separuh akhir",
+        "final": "Akhir",
+        "specific": "Fixtures tertentu sahaja"
+      }
+    },
+    "step6": {
+      "heading": "Butiran Komersial",
+      "chargesEntry": "Adakah anda akan mengenakan bayaran masuk atau menjual tiket?",
+      "sellsFnb": "Adakah F&B akan dijual semasa tontonan?",
+      "sponsorshipInterest": "Berminat dengan penajaan atau pengaktifan berjenama bersama?",
+      "yes": "Ya",
+      "no": "Tidak",
+      "more": "Ceritakan lebih lanjut"
+    },
+    "step7": {
+      "heading": "Ada Lagi?",
+      "notes": "Nota tambahan (pilihan)"
+    },
+    "step8": {
+      "heading": "Persetujuan & Hantar",
+      "consentPdpa": "Saya bersetuju untuk Total Sports Asia Sdn Bhd mengumpul dan memproses data peribadi yang saya berikan selaras dengan Akta Perlindungan Data Peribadi 2010 (Malaysia) dan Notis Privasi TSA, bagi tujuan memproses permohonan tontonan awam saya dan komunikasi berkaitan.",
+      "consentCompliance": "Saya faham bahawa menganjurkan tontonan awam perlawanan FIFA World Cup 2026 di Malaysia tanpa kebenaran bertulis daripada Total Sports Asia adalah pelanggaran peraturan FIFA dan boleh mengakibatkan tindakan penguatkuasaan.",
+      "privacyLink": "Notis Privasi",
+      "submit": "Hantar Pendaftaran",
+      "submitting": "Menghantar..."
+    },
+    "step9": {
+      "headline": "Pendaftaran diterima",
+      "body": "Terima kasih. Ahli pasukan Total Sports Asia akan menghubungi anda dalam masa 3 hari bekerja. Untuk pertanyaan segera, hubungi kami di WhatsApp.",
+      "refLabel": "ID Rujukan Anda",
+      "whatsappCta": "Hubungi Kami di WhatsApp"
+    },
+    "progress": "Langkah {current} daripada {total}",
+    "back": "Kembali",
+    "next": "Seterusnya",
+    "required": "Medan ini diperlukan",
+    "errorGeneric": "Sesuatu telah berlaku. Sila cuba lagi.",
+    "errorNetwork": "Ralat rangkaian. Sila semak sambungan anda dan cuba lagi.",
+    "errorRateLimit": "Terlalu banyak permohonan. Sila cuba lagi sebentar lagi.",
+    "selectPlaceholder": "-- Pilih --"
+  },
+  "whatsapp": {
+    "heading": "Ingin Berbincang Dahulu?",
+    "body": "Hubungi pasukan tontonan awam Total Sports Asia terus di WhatsApp.",
+    "cta": "Mesej Kami di WhatsApp",
+    "prefilledMessage": "Salam, saya ingin mendapatkan maklumat lanjut tentang kebenaran tontonan awam FIFA World Cup 2026."
+  },
+  "footer": {
+    "copyright": "© Total Sports Asia Sdn Bhd 2026",
+    "disclaimer": "FIFA World Cup 2026™ adalah tanda dagangan FIFA. Total Sports Asia adalah pengendali hak komersial berlesen untuk FIFA World Cup 2026 di Malaysia.",
+    "noCookies": "Kami tidak menggunakan kuki penjejakan.",
+    "privacy": "Notis Privasi",
+    "contact": "Hubungi",
+    "langToggle": "English"
+  },
+  "privacy": {
+    "title": "Notis Privasi",
+    "description": "Notis Privasi Total Sports Asia Sdn Bhd — PDPA 2010 pematuhan untuk portal pendaftaran tontonan awam FIFA World Cup 2026.",
+    "backToHome": "Kembali ke Laman Utama"
+  },
+  "meta": {
+    "title": "Daftar Tontonan Awam FIFA World Cup 2026 Malaysia",
+    "description": "Portal rasmi untuk perniagaan dan organisasi di Malaysia yang ingin menganjurkan tontonan awam FIFA World Cup 2026. Mohon kebenaran anda daripada Total Sports Asia.",
+    "privacyTitle": "Notis Privasi | Total Sports Asia",
+    "privacyDescription": "Notis Privasi Total Sports Asia Sdn Bhd untuk portal pendaftaran tontonan awam FIFA World Cup 2026. Pematuhan PDPA 2010."
+  }
+}

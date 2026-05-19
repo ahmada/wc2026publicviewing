@@ -1,0 +1,139 @@
+---
+import type { Lang } from '../i18n/index';
+import { useTranslations, getAlternateUrl } from '../i18n/index';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const alternateLang = lang === 'ms' ? 'en' : 'ms';
+const alternateHref = getAlternateUrl(Astro.url, alternateLang);
+const whatsappNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER || '';
+const waMessage = encodeURIComponent(t('whatsapp.prefilledMessage'));
+const waHref = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
+---
+
+<header id="nav" class="nav">
+  <div class="nav-inner">
+    <!-- Wordmark -->
+    <a href={`/${lang}/`} class="nav-wordmark" aria-label="Total Sports Asia — Home">
+      <span class="wordmark-main">TOTAL SPORTS</span>
+      <span class="wordmark-sub">ASIA</span>
+    </a>
+
+    <!-- Right actions -->
+    <div class="nav-actions">
+      <a href={alternateHref} class="nav-lang" aria-label={`Switch to ${t('nav.langToggle')}`}>
+        {t('nav.langToggle')}
+      </a>
+      <a href={waHref} target="_blank" rel="noopener noreferrer" class="nav-whatsapp">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span class="nav-wa-label">{t('nav.whatsapp')}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease;
+    border-bottom: 1px solid transparent;
+  }
+  .nav.scrolled {
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom-color: rgba(245, 247, 250, 0.06);
+  }
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 768px) {
+    .nav-inner { padding: 0 2.5rem; }
+  }
+  .nav-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    text-decoration: none;
+  }
+  .wordmark-main {
+    font-family: var(--font-eyebrow);
+    font-weight: 700;
+    font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+    letter-spacing: 0.25em;
+    color: var(--color-white);
+  }
+  .wordmark-sub {
+    font-family: var(--font-eyebrow);
+    font-weight: 600;
+    font-size: clamp(0.5rem, 1.3vw, 0.6rem);
+    letter-spacing: 0.4em;
+    color: var(--color-gold);
+  }
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .nav-lang {
+    font-family: var(--font-eyebrow);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    text-decoration: none;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid rgba(245, 247, 250, 0.12);
+    border-radius: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  .nav-lang:hover {
+    color: var(--color-white);
+    border-color: rgba(245, 247, 250, 0.3);
+  }
+  .nav-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-eyebrow);
+    font-weight: 700;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    background: var(--color-gold);
+    padding: 0.45rem 0.9rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+    min-height: 36px;
+  }
+  .nav-whatsapp:hover { background: var(--color-gold-bright); }
+  @media (max-width: 380px) {
+    .nav-wa-label { display: none; }
+    .nav-whatsapp { padding: 0.45rem 0.6rem; }
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) nav?.classList.add('scrolled');
+    else nav?.classList.remove('scrolled');
+  }, { passive: true });
+</script>

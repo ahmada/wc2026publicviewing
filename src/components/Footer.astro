@@ -1,0 +1,133 @@
+---
+import type { Lang } from '../i18n/index';
+import { useTranslations, getAlternateUrl } from '../i18n/index';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const alternateLang = lang === 'ms' ? 'en' : 'ms';
+const alternateHref = getAlternateUrl(Astro.url, alternateLang);
+const whatsappNumber = import.meta.env.PUBLIC_WHATSAPP_NUMBER || '';
+const waMessage = encodeURIComponent(t('whatsapp.prefilledMessage'));
+const waHref = `https://wa.me/${whatsappNumber}?text=${waMessage}`;
+---
+
+<footer class="footer">
+  <div class="section-inner">
+    <div class="footer-grid">
+      <!-- Brand column -->
+      <div class="footer-brand">
+        <div class="footer-wordmark">
+          <span class="wordmark-main">TOTAL SPORTS</span>
+          <span class="wordmark-sub">ASIA</span>
+        </div>
+        <p class="footer-tagline">{t('compliance.badge')}</p>
+        <p class="footer-no-cookies">{t('footer.noCookies')}</p>
+      </div>
+
+      <!-- Links column -->
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href={`/${lang}/privacy`} class="footer-link">{t('footer.privacy')}</a>
+        <a href={waHref} target="_blank" rel="noopener noreferrer" class="footer-link">{t('nav.whatsapp')}</a>
+        <a href="#register" class="footer-link">{t('form.sectionHeading')}</a>
+        <a href={alternateHref} class="footer-link footer-lang">{t('footer.langToggle')}</a>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">{t('footer.copyright')}</p>
+      <p class="footer-disclaimer">{t('footer.disclaimer')}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-navy-mid);
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--color-border);
+  }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .wordmark-main {
+    font-family: var(--font-eyebrow);
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--color-white);
+  }
+  .wordmark-sub {
+    font-family: var(--font-eyebrow);
+    font-weight: 600;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    color: var(--color-gold);
+  }
+  .footer-tagline {
+    font-family: var(--font-eyebrow);
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+  .footer-no-cookies {
+    font-size: 0.75rem;
+    color: rgba(245, 247, 250, 0.3);
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  @media (min-width: 640px) {
+    .footer-links { align-items: flex-end; }
+  }
+  .footer-link {
+    font-family: var(--font-eyebrow);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-link:hover { color: var(--color-white); }
+  .footer-lang { color: var(--color-gold); }
+  .footer-lang:hover { color: var(--color-gold-bright); }
+  .footer-bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-copyright {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+  }
+  .footer-disclaimer {
+    font-size: 0.7rem;
+    color: rgba(245, 247, 250, 0.3);
+    max-width: 600px;
+    line-height: 1.5;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<svg
+  class={className}
+  viewBox="0 0 120 100"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <!-- Crossbar -->
+  <line x1="10" y1="30" x2="110" y2="30" stroke="rgba(201,168,76,0.25)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Left post -->
+  <line x1="10" y1="30" x2="10" y2="95" stroke="rgba(201,168,76,0.25)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right post -->
+  <line x1="110" y1="30" x2="110" y2="95" stroke="rgba(201,168,76,0.25)" stroke-width="2" stroke-linecap="round"/>
+  <!-- Net suggestion lines -->
+  <line x1="10" y1="45" x2="110" y2="45" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="10" y1="60" x2="110" y2="60" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="10" y1="75" x2="110" y2="75" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="30" y1="30" x2="30" y2="95" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="50" y1="30" x2="50" y2="95" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="70" y1="30" x2="70" y2="95" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+  <line x1="90" y1="30" x2="90" y2="95" stroke="rgba(201,168,76,0.08)" stroke-width="1"/>
+</svg>

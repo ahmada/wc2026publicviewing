@@ -1,0 +1,271 @@
+@import "tailwindcss";
+
+@theme {
+  /* Core palette — TSA brand: black base, red primary accent */
+  --color-navy:        #0a0a0a;
+  --color-navy-mid:    #111111;
+  --color-navy-light:  #1c1c1c;
+  --color-gold:        #dd0000;
+  --color-gold-bright: #ff2828;
+  --color-gold-dim:    rgba(221, 0, 0, 0.12);
+  --color-gold-glow:   rgba(221, 0, 0, 0.10);
+  --color-white:       #f5f7fa;
+  --color-muted:       rgba(245, 247, 250, 0.50);
+  --color-border:      rgba(245, 247, 250, 0.08);
+  --color-border-gold: rgba(221, 0, 0, 0.30);
+
+  /* Typography — TSA brand: Montserrat + Roboto */
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-eyebrow: 'Montserrat', system-ui, sans-serif;
+  --font-body:    'Roboto', system-ui, sans-serif;
+
+  /* Spacing / sizing */
+  --radius-card: 4px;
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0;
+}
+
+p { margin: 0; }
+
+a { color: inherit; text-decoration: none; }
+
+img, svg { display: block; }
+
+/* ─── Floodlight beam animation ─── */
+@keyframes beam-breathe {
+  from { opacity: 0.6; }
+  to   { opacity: 1;   }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes gold-draw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── Form step transitions ─── */
+@keyframes step-enter {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+@keyframes step-exit {
+  from { opacity: 1; transform: translateX(0);     }
+  to   { opacity: 0; transform: translateX(-40px); }
+}
+
+.step-animate-enter {
+  animation: step-enter 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.step-animate-exit {
+  animation: step-exit 0.2s ease forwards;
+}
+
+/* ─── Heading accent underline ─── */
+.heading-accent {
+  position: relative;
+  display: inline-block;
+}
+.heading-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.heading-accent.in-view::after {
+  transform: scaleX(1);
+}
+
+/* ─── Eyebrow label ─── */
+.eyebrow {
+  font-family: var(--font-eyebrow);
+  font-weight: 600;
+  font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ─── Gold CTA button ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-gold);
+  color: var(--color-white);
+  font-family: var(--font-eyebrow);
+  font-weight: 700;
+  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--color-gold-bright);
+  transform: translateY(-1px);
+}
+
+/* ─── Ghost button ─── */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-eyebrow);
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border: 1px solid rgba(245, 247, 250, 0.3);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+}
+.btn-ghost:hover {
+  border-color: var(--color-white);
+  background: rgba(245, 247, 250, 0.05);
+}
+
+/* ─── Form inputs ─── */
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.875rem 1rem;
+  border-radius: var(--radius-card);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  appearance: none;
+}
+.form-input::placeholder { color: var(--color-muted); }
+.form-input:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-glow);
+}
+.form-input.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-eyebrow);
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+.form-label .required {
+  color: var(--color-gold);
+  margin-left: 0.2em;
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: #f87171;
+  margin-top: 0.35rem;
+}
+
+/* ─── Checkbox ─── */
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+.form-checkbox-label input[type="checkbox"] {
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  min-width: 1.125rem;
+  border: 1px solid var(--color-border-gold);
+  background: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: background 0.15s ease;
+}
+.form-checkbox-label input[type="checkbox"]:checked {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L4.5 7.5L11 1' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px;
+}
+
+/* ─── Section layout ─── */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+@media (min-width: 480px) {
+  .section-inner { padding: 0 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .section-inner { padding: 0 2.5rem; }
+}
+
+/* ─── Mobile form section padding ─── */
+@media (max-width: 767px) {
+  #register { padding: 3.5rem 0 !important; }
+}
+
+/* ─── Scroll-reveal observer hook ─── */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.in-view { opacity: 1; transform: translateY(0); }

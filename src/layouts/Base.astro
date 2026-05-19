@@ -1,0 +1,121 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../i18n/index';
+import { getAlternateUrl } from '../i18n/index';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+  ogImage?: string;
+  noIndex?: boolean;
+}
+
+const { title, description, lang, ogImage = '/og-image.jpg', noIndex = false } = Astro.props;
+
+const siteUrl = 'https://publicviewing.totalsportsasia.com';
+const canonicalURL = new URL(Astro.url.pathname, siteUrl).href;
+const ogImageURL = new URL(ogImage, siteUrl).href;
+const alternateLang = lang === 'ms' ? 'en' : 'ms';
+const alternateURL = new URL(getAlternateUrl(Astro.url, alternateLang), siteUrl).href;
+const canonicalLangURL = new URL(getAlternateUrl(Astro.url, lang), siteUrl).href;
+
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Total Sports Asia Sdn Bhd',
+  url: siteUrl,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer service',
+    availableLanguage: ['English', 'Malay'],
+  },
+};
+
+const eventSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsEvent',
+  name: 'FIFA World Cup 2026 — Malaysia Public Viewing Registration',
+  description: 'Official registration portal for public viewing permits in Malaysia',
+  location: {
+    '@type': 'Country',
+    name: 'Malaysia',
+  },
+  startDate: '2026-06-11',
+  endDate: '2026-07-19',
+  organizer: {
+    '@type': 'Organization',
+    name: 'Total Sports Asia Sdn Bhd',
+  },
+};
+---
+<!DOCTYPE html>
+<html lang={lang} dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title} | Total Sports Asia</title>
+  <meta name="description" content={description}>
+  {noIndex && <meta name="robots" content="noindex, nofollow">}
+  <link rel="canonical" href={canonicalURL}>
+
+  <!-- hreflang -->
+  <link rel="alternate" hreflang={lang} href={canonicalLangURL}>
+  <link rel="alternate" hreflang={alternateLang} href={alternateURL}>
+  <link rel="alternate" hreflang="x-default" href={new URL('/ms', siteUrl).href}>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={`${title} | Total Sports Asia`}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={ogImageURL}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:site_name" content="Total Sports Asia">
+  <meta property="og:locale" content={lang === 'ms' ? 'ms_MY' : 'en_MY'}>
+  <meta property="og:locale:alternate" content={lang === 'ms' ? 'en_MY' : 'ms_MY'}>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={`${title} | Total Sports Asia`}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImageURL}>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- Google Fonts: Montserrat + Roboto (TSA brand) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(eventSchema)} />
+
+  <slot name="head" />
+</head>
+<body>
+  <slot />
+
+  <!-- Scroll-reveal observer -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal, .heading-accent').forEach((el) => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<svg
+  class={className}
+  viewBox="0 0 1200 400"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  preserveAspectRatio="xMidYMax slice"
+>
+  <!-- Stadium outer bowl -->
+  <path
+    d="M0 400 L0 280 Q80 240 200 230 Q350 220 500 200 Q600 192 700 200 Q850 220 1000 230 Q1120 240 1200 280 L1200 400 Z"
+    fill="rgba(255,255,255,0.02)"
+  />
+  <!-- Inner tier -->
+  <path
+    d="M100 400 L100 310 Q200 278 350 265 Q500 252 600 248 Q700 252 850 265 Q1000 278 1100 310 L1100 400 Z"
+    fill="rgba(255,255,255,0.02)"
+  />
+  <!-- Roof line left -->
+  <path
+    d="M0 260 Q40 180 120 160 L250 148 Q300 145 350 152"
+    stroke="rgba(201,168,76,0.12)"
+    stroke-width="1"
+    fill="none"
+  />
+  <!-- Roof line right -->
+  <path
+    d="M1200 260 Q1160 180 1080 160 L950 148 Q900 145 850 152"
+    stroke="rgba(201,168,76,0.12)"
+    stroke-width="1"
+    fill="none"
+  />
+  <!-- Left floodlight tower -->
+  <line x1="180" y1="400" x2="160" y2="80" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <rect x="148" y="74" width="26" height="10" fill="rgba(255,255,255,0.08)" rx="1"/>
+  <!-- Right floodlight tower -->
+  <line x1="1020" y1="400" x2="1040" y2="80" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <rect x="1026" y="74" width="26" height="10" fill="rgba(255,255,255,0.08)" rx="1"/>
+  <!-- Pitch outline suggestion -->
+  <rect
+    x="380" y="320" width="440" height="60"
+    fill="none"
+    stroke="rgba(255,255,255,0.04)"
+    stroke-width="1"
+  />
+  <!-- Centre circle -->
+  <circle cx="600" cy="350" r="24" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+</svg>

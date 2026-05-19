@@ -1,0 +1,183 @@
+{
+  "nav": {
+    "wordmark": "TOTAL SPORTS ASIA",
+    "whatsapp": "WhatsApp",
+    "langToggle": "BM"
+  },
+  "hero": {
+    "eyebrow": "OFFICIAL COMMERCIAL RIGHTS OPERATOR — MALAYSIA",
+    "headline": "Host a FIFA World Cup 2026™ Public Viewing in Malaysia",
+    "subhead": "All public screenings of the Tournament in Malaysia require prior written authorization from Total Sports Asia. Register below to begin your licensing process.",
+    "ctaPrimary": "Apply for a Public Viewing Authorisation",
+    "ctaSecondary": "Talk to Us on WhatsApp",
+    "countdownLabel": "Days Until the First Match"
+  },
+  "compliance": {
+    "badge": "LICENSED RIGHTS OPERATOR",
+    "heading": "Public viewings require written permission",
+    "body": "Under FIFA regulations, any public exhibition of FIFA World Cup 2026 matches in Malaysia — including in restaurants, cafés, bars, hotels, malls, fan zones, public squares, stadium overflow, corporate events, and ticketed venues — requires prior written authorization from Total Sports Asia as the licensed commercial rights operator. Unauthorized public screenings may result in enforcement action under Malaysian law and FIFA's commercial rights framework."
+  },
+  "who": {
+    "heading": "Who Needs Authorisation?",
+    "hospitality": {
+      "title": "Hospitality",
+      "desc": "F&B outlets, hotels, cafés, lounges"
+    },
+    "venues": {
+      "title": "Venues & Public Spaces",
+      "desc": "Malls, fan zones, public squares, stadium overflow"
+    },
+    "corporate": {
+      "title": "Corporate & Community",
+      "desc": "Offices, condominiums, associations, NGOs, embassies"
+    }
+  },
+  "howItWorks": {
+    "heading": "How It Works",
+    "steps": [
+      { "title": "Submit Your Registration", "desc": "Complete the online form with your organisation and venue details." },
+      { "title": "TSA Reviews Your Application", "desc": "Our team will review your venue, scope, and intended audience." },
+      { "title": "Receive Your Written Authorisation", "desc": "Get your official written authorisation and licensing terms." },
+      { "title": "Host Your Viewing", "desc": "Compliant, supported, and eligible for TSA promotional channels." }
+    ]
+  },
+  "form": {
+    "sectionHeading": "Register for Authorisation",
+    "step1": {
+      "headline": "Let's get your public viewing approved",
+      "subhead": "About 3 minutes. We'll come back to you within 3 working days.",
+      "cta": "Start"
+    },
+    "step2": {
+      "heading": "About You",
+      "fullName": "Full name",
+      "position": "Position / role",
+      "email": "Email address",
+      "phone": "Phone number (WhatsApp preferred)"
+    },
+    "step3": {
+      "heading": "Your Organisation",
+      "orgName": "Business or organisation name",
+      "orgType": "Business type",
+      "ssmNumber": "SSM / business registration number (optional)",
+      "orgTypes": {
+        "fnb": "F&B Outlet",
+        "hotel": "Hotel",
+        "mall": "Mall",
+        "fanzone": "Fan Zone Operator",
+        "corporate": "Corporate",
+        "community": "Community or NGO",
+        "government": "Government",
+        "other": "Other"
+      }
+    },
+    "step4": {
+      "heading": "Your Venue",
+      "venueName": "Venue name (if different from organisation)",
+      "venueAddress": "Venue address",
+      "state": "State",
+      "capacity": "Expected venue capacity",
+      "screenSetup": "Number of screens and setup type (optional)",
+      "capacities": {
+        "under-50": "Under 50",
+        "50-200": "50–200",
+        "200-500": "200–500",
+        "500-2000": "500–2,000",
+        "2000+": "2,000+"
+      },
+      "states": {
+        "johor": "Johor",
+        "kedah": "Kedah",
+        "kelantan": "Kelantan",
+        "melaka": "Melaka",
+        "negeri-sembilan": "Negeri Sembilan",
+        "pahang": "Pahang",
+        "perak": "Perak",
+        "perlis": "Perlis",
+        "pulau-pinang": "Pulau Pinang",
+        "sabah": "Sabah",
+        "sarawak": "Sarawak",
+        "selangor": "Selangor",
+        "terengganu": "Terengganu",
+        "kuala-lumpur": "Federal Territory of Kuala Lumpur",
+        "labuan": "Federal Territory of Labuan",
+        "putrajaya": "Federal Territory of Putrajaya"
+      }
+    },
+    "step5": {
+      "heading": "Your Viewing Plan",
+      "matchesPlanned": "Matches you intend to screen",
+      "estimatedAudience": "Estimated audience per match day (optional)",
+      "matches": {
+        "all": "All 104 matches",
+        "group": "Group stage",
+        "r32": "Round of 32",
+        "r16": "Round of 16",
+        "quarters": "Quarter-finals",
+        "semis": "Semi-finals",
+        "final": "Final",
+        "specific": "Specific fixtures only"
+      }
+    },
+    "step6": {
+      "heading": "Commercial Details",
+      "chargesEntry": "Will you charge entry or sell tickets?",
+      "sellsFnb": "Will F&B be sold during viewings?",
+      "sponsorshipInterest": "Interested in sponsorship or co-branded activation?",
+      "yes": "Yes",
+      "no": "No",
+      "more": "Tell me more"
+    },
+    "step7": {
+      "heading": "Anything Else?",
+      "notes": "Additional notes (optional)"
+    },
+    "step8": {
+      "heading": "Consent & Submit",
+      "consentPdpa": "I consent to Total Sports Asia Sdn Bhd collecting and processing the personal data I have provided in accordance with the Personal Data Protection Act 2010 (Malaysia) and TSA's Privacy Notice, for the purpose of processing my public viewing application and related communications.",
+      "consentCompliance": "I understand that hosting a public viewing of FIFA World Cup 2026 matches in Malaysia without written authorization from Total Sports Asia is a breach of FIFA regulations and may result in enforcement action.",
+      "privacyLink": "Privacy Notice",
+      "submit": "Submit Registration",
+      "submitting": "Submitting..."
+    },
+    "step9": {
+      "headline": "Registration received",
+      "body": "Thank you. A member of the Total Sports Asia team will be in touch within 3 working days. For urgent enquiries, message us on WhatsApp.",
+      "refLabel": "Your Reference ID",
+      "whatsappCta": "Message Us on WhatsApp"
+    },
+    "progress": "Step {current} of {total}",
+    "back": "Back",
+    "next": "Next",
+    "required": "This field is required",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "errorNetwork": "Network error. Please check your connection and try again.",
+    "errorRateLimit": "Too many submissions. Please try again later.",
+    "selectPlaceholder": "-- Select --"
+  },
+  "whatsapp": {
+    "heading": "Prefer to Talk It Through?",
+    "body": "Message the Total Sports Asia public viewing team directly on WhatsApp.",
+    "cta": "Message Us on WhatsApp",
+    "prefilledMessage": "Hi, I'd like to find out more about a FIFA World Cup 2026 public viewing authorisation."
+  },
+  "footer": {
+    "copyright": "© Total Sports Asia Sdn Bhd 2026",
+    "disclaimer": "FIFA World Cup 2026™ is a trademark of FIFA. Total Sports Asia is the licensed commercial rights operator for the FIFA World Cup 2026 in Malaysia.",
+    "noCookies": "We don't use tracking cookies.",
+    "privacy": "Privacy Notice",
+    "contact": "Contact",
+    "langToggle": "Bahasa Malaysia"
+  },
+  "privacy": {
+    "title": "Privacy Notice",
+    "description": "Total Sports Asia Sdn Bhd Privacy Notice — PDPA 2010 compliance for the FIFA World Cup 2026 public viewing registration portal.",
+    "backToHome": "Back to Home"
+  },
+  "meta": {
+    "title": "Register for FIFA World Cup 2026 Malaysia Public Viewing",
+    "description": "Official portal for businesses and organisations in Malaysia wishing to host a FIFA World Cup 2026 public viewing. Apply for your authorisation from Total Sports Asia.",
+    "privacyTitle": "Privacy Notice | Total Sports Asia",
+    "privacyDescription": "Total Sports Asia Sdn Bhd Privacy Notice for the FIFA World Cup 2026 public viewing registration portal. PDPA 2010 compliant."
+  }
+}

@@ -1,0 +1,29 @@
+---
+export const prerender = true;
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Hero from '../../components/Hero.astro';
+import ComplianceBand from '../../components/ComplianceBand.astro';
+import WhoNeedsPermit from '../../components/WhoNeedsPermit.astro';
+import HowItWorks from '../../components/HowItWorks.astro';
+import RegistrationForm from '../../components/RegistrationForm';
+import WhatsAppBand from '../../components/WhatsAppBand.astro';
+import Footer from '../../components/Footer.astro';
+import { useTranslations } from '../../i18n/index';
+
+const lang = 'ms' as const;
+const t = useTranslations(lang);
+---
+
+<Base title={t('meta.title')} description={t('meta.description')} lang={lang}>
+  <Nav lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <ComplianceBand lang={lang} />
+    <WhoNeedsPermit lang={lang} />
+    <HowItWorks lang={lang} />
+    <RegistrationForm lang={lang} client:load />
+    <WhatsAppBand lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</Base>

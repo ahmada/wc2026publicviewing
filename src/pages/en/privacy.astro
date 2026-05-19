@@ -1,0 +1,148 @@
+---
+export const prerender = true;
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { useTranslations } from '../../i18n/index';
+
+const lang = 'en' as const;
+const t = useTranslations(lang);
+---
+
+<Base title={t('meta.privacyTitle')} description={t('meta.privacyDescription')} lang={lang} noIndex={false}>
+  <fragment slot="head">
+    <script type="application/ld+json">{JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://publicviewing.totalsportsasia.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Privacy Notice" }
+      ]
+    })}</script>
+  </fragment>
+
+  <Nav lang={lang} />
+  <main>
+    <!-- Header band -->
+    <section style="background: var(--color-navy-mid); border-bottom: 1px solid var(--color-border); padding: 7rem 0 3rem;">
+      <div class="section-inner">
+        <p class="eyebrow" style="margin-bottom: 0.75rem;">TOTAL SPORTS ASIA SDN BHD</p>
+        <h1 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 5vw, 3rem); color: var(--color-white); margin-bottom: 0.5rem;">Privacy Notice</h1>
+        <p style="color: var(--color-muted); font-size: 0.875rem;">Last updated: May 2026 | Effective under the Personal Data Protection Act 2010 (Malaysia)</p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section style="padding: 4rem 0 6rem;">
+      <div class="section-inner">
+        <div class="privacy-body">
+
+          <h2>1. Data User Identity</h2>
+          <p>Total Sports Asia Sdn Bhd ("<strong>TSA</strong>", "<strong>we</strong>", "<strong>us</strong>", "<strong>our</strong>") is the data user responsible for the personal data collected through this portal. TSA is the licensed commercial rights operator for the FIFA World Cup 2026 in Malaysia.</p>
+          <p>Data Protection Officer contact: <a href="mailto:privacy@totalsportsasia.com">privacy@totalsportsasia.com</a></p>
+
+          <h2>2. Notice and Choice</h2>
+          <p>We collect personal data only for the purposes described in this notice. By submitting a registration through this portal, you acknowledge that you have read and understood this notice and consent to the processing of your personal data as described.</p>
+          <p>You have the right to withhold or withdraw consent. However, withholding or withdrawing consent may mean we are unable to process your public viewing permit application.</p>
+
+          <h2>3. Categories of Data Collected</h2>
+          <p>We collect the following categories of personal and business data:</p>
+          <ul>
+            <li><strong>Identity data:</strong> Full name, position, business registration number (SSM)</li>
+            <li><strong>Contact data:</strong> Email address, phone number (WhatsApp)</li>
+            <li><strong>Business data:</strong> Organisation name, business type, venue name, venue address, state, venue capacity</li>
+            <li><strong>Application data:</strong> Matches intended to screen, estimated audience size, commercial arrangements (entry fees, F&B), sponsorship interest</li>
+            <li><strong>Technical data:</strong> IP address (hashed), submission timestamp, browser/device information collected automatically by Cloudflare infrastructure</li>
+          </ul>
+
+          <h2>4. Purposes of Processing</h2>
+          <p>We process your personal data for the following purposes:</p>
+          <ul>
+            <li>Processing and evaluating your public viewing permit application</li>
+            <li>Communicating with you about your application status and licensing terms</li>
+            <li>Issuing written authorisation for permitted public viewings</li>
+            <li>Compliance with FIFA's commercial rights framework and obligations to FIFA as rights grantor</li>
+            <li>Compliance with applicable Malaysian laws and regulations</li>
+            <li>Notifying you of TSA promotional opportunities, where you have opted in</li>
+            <li>Internal record-keeping and audit</li>
+          </ul>
+
+          <h2>5. Disclosure of Data</h2>
+          <p>Your personal data may be shared with:</p>
+          <ul>
+            <li><strong>FIFA and authorised FIFA entities</strong> — as required under the commercial rights agreement for reporting and compliance purposes</li>
+            <li><strong>Malaysian regulatory authorities</strong> — where required by law (e.g., MCMC, Jabatan Penyiaran, KKMM)</li>
+            <li><strong>TSA's authorised service providers</strong> — including email delivery providers (Resend / Brevo), Cloudflare (infrastructure and security), operating strictly under data processing agreements</li>
+            <li><strong>TSA's legal advisers</strong> — in connection with enforcement or dispute resolution, where necessary</li>
+          </ul>
+          <p>We do not sell, rent, or trade your personal data to third parties for marketing purposes.</p>
+
+          <h2>6. Data Retention</h2>
+          <p>We retain personal data for a period of <strong>24 months</strong> following the conclusion of the FIFA World Cup 2026 (approximately July 2028), unless a longer retention period is required by applicable law or ongoing legal proceedings. After the retention period, data is securely deleted or anonymised.</p>
+          <p>Technical logs (IP hashes, timestamps) are retained for 90 days for security and audit purposes.</p>
+
+          <h2>7. Data Integrity</h2>
+          <p>We take reasonable steps to ensure that personal data is accurate, complete, and up to date for the purposes for which it is used. If you believe any information we hold about you is inaccurate, please contact us using the details below.</p>
+
+          <h2>8. Access and Correction Rights</h2>
+          <p>Under the Personal Data Protection Act 2010, you have the right to:</p>
+          <ul>
+            <li><strong>Access</strong> the personal data we hold about you</li>
+            <li><strong>Correct</strong> any inaccurate, incomplete, or out-of-date data</li>
+            <li><strong>Withdraw consent</strong> to the processing of your personal data (subject to legal and contractual obligations)</li>
+          </ul>
+          <p>To exercise these rights, submit a written request to our Data Protection Officer at <a href="mailto:privacy@totalsportsasia.com">privacy@totalsportsasia.com</a>. We will respond within 21 days.</p>
+
+          <h2>9. Security</h2>
+          <p>We implement appropriate technical and organisational measures to protect personal data against unauthorised access, disclosure, alteration, or destruction. These include:</p>
+          <ul>
+            <li>HTTPS enforcement and TLS encryption in transit</li>
+            <li>Cloudflare WAF, DDoS protection, and Bot Fight Mode</li>
+            <li>Server-side input validation and sanitisation</li>
+            <li>Access controls limiting data access to authorised personnel only</li>
+            <li>IP hashing before storage in rate-limiting systems</li>
+          </ul>
+
+          <h2>10. Cookies and Analytics</h2>
+          <p>This site uses <strong>Cloudflare Web Analytics</strong>, which is cookieless and does not track individuals across sessions or websites. No consent banner is required. We do not deploy any advertising pixels, remarketing tags, or third-party tracking cookies.</p>
+
+          <h2>11. Contact</h2>
+          <p>For any queries relating to this Privacy Notice or the exercise of your data subject rights:</p>
+          <p>
+            <strong>Data Protection Officer</strong><br>
+            Total Sports Asia Sdn Bhd<br>
+            Email: <a href="mailto:privacy@totalsportsasia.com">privacy@totalsportsasia.com</a>
+          </p>
+
+          <div style="margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+            <a href="/en/" class="btn-ghost" style="font-size: 0.75rem;">&larr; {t('privacy.backToHome')}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</Base>
+
+<style>
+  .privacy-body {
+    max-width: 720px;
+    color: var(--color-muted);
+    line-height: 1.75;
+  }
+  .privacy-body h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-white);
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .privacy-body h2:first-child { margin-top: 0; }
+  .privacy-body p { margin-bottom: 0.85rem; font-size: 0.9rem; }
+  .privacy-body ul { margin: 0.5rem 0 1rem 1.25rem; }
+  .privacy-body li { margin-bottom: 0.4rem; font-size: 0.9rem; }
+  .privacy-body a { color: var(--color-gold); text-decoration: underline; text-underline-offset: 3px; }
+  .privacy-body strong { color: var(--color-white); font-weight: 600; }
+</style>
