@@ -156,6 +156,7 @@
     "errorGeneric": "Something went wrong. Please try again.",
     "errorNetwork": "Network error. Please check your connection and try again.",
     "errorRateLimit": "Too many submissions. Please try again later.",
+    "errorTurnstile": "Please complete the security check above before submitting.",
     "selectPlaceholder": "-- Select --"
   },
   "whatsapp": {

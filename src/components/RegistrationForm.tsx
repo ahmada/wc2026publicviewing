@@ -477,7 +477,7 @@ function StepConsent({ lang, data, onSubmit, onBack, cfToken, onToken }: {
     const e: Record<string, string> = {};
     if (!pdpa) e.pdpa = t(lang, 'form.required');
     if (!compliance) e.compliance = t(lang, 'form.required');
-    if (!cfToken) e.turnstile = t(lang, 'form.required');
+    if (!cfToken) e.turnstile = t(lang, 'form.errorTurnstile');
     if (Object.keys(e).length) { setErrors(e); return; }
     onSubmit();
   };
@@ -507,8 +507,11 @@ function StepConsent({ lang, data, onSubmit, onBack, cfToken, onToken }: {
 
       {/* Turnstile widget */}
       <div style={{ margin: '1.5rem 0' }}>
+        <p style={{ fontFamily: 'var(--font-eyebrow)', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-muted)', marginBottom: '0.75rem' }}>
+          Security verification
+        </p>
         <div ref={widgetRef} />
-        {errors.turnstile && <p class="form-error">{errors.turnstile}</p>}
+        {errors.turnstile && <p class="form-error" style={{ marginTop: '0.5rem' }}>{errors.turnstile}</p>}
       </div>
 
       <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>

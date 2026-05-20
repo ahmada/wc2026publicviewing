@@ -156,6 +156,7 @@
     "errorGeneric": "Sesuatu telah berlaku. Sila cuba lagi.",
     "errorNetwork": "Ralat rangkaian. Sila semak sambungan anda dan cuba lagi.",
     "errorRateLimit": "Terlalu banyak permohonan. Sila cuba lagi sebentar lagi.",
+    "errorTurnstile": "Sila lengkapkan semakan keselamatan di atas sebelum menghantar.",
     "selectPlaceholder": "-- Pilih --"
   },
   "whatsapp": {
