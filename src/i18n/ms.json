@@ -36,9 +36,10 @@
     "heading": "Bagaimana Ia Berfungsi",
     "feesNote": "Yuran pelesenan dikenakan untuk semua tontonan awam. Butiran yuran disertakan bersama pakej kebenaran anda.",
     "steps": [
-      { "title": "Hantar Pendaftaran Anda", "desc": "Lengkapkan borang dalam talian dengan butiran organisasi dan tempat anda." },
-      { "title": "TSA Menyemak Permohonan Anda", "desc": "Pasukan kami akan menyemak tempat, skop, dan penonton yang dimaksudkan." },
-      { "title": "Terima Kebenaran Bertulis Anda", "desc": "Terima kebenaran bertulis rasmi anda, butiran yuran pelesenan yang berkenaan, dan syarat komersial." },
+      { "title": "Hantar Pendaftaran Dalam Talian", "desc": "Lengkapkan borang dalam talian dengan butiran organisasi dan tempat anda." },
+      { "title": "TSA Menyemak Permohonan", "desc": "Pasukan kami akan menyemak tempat, skop, dan penonton yang dimaksudkan." },
+      { "title": "Selesaikan Pembayaran", "desc": "Bayar yuran pelesenan yang berkenaan untuk mengesahkan kebenaran tontonan awam anda." },
+      { "title": "Terima Kebenaran Bertulis", "desc": "Terima kebenaran bertulis rasmi anda dan syarat komersial." },
       { "title": "Hos Tontonan Anda", "desc": "Patuh, disokong, dan layak untuk saluran promosi TSA." }
     ]
   },

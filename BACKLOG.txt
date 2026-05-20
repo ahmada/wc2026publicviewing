@@ -1,0 +1,27 @@
+BACKLOG
+=======
+
+## Rate Limiting KV Namespace
+Create a Cloudflare KV namespace for IP-based rate limiting and wire it to the Pages project.
+
+Steps:
+1. Workers & Pages → KV → Create namespace (suggested name: tsa-rate-limit)
+2. Pages project → Settings → Functions → KV namespace bindings
+3. Add binding: variable name = RATE_LIMIT_KV, namespace = the one created above
+
+Context: The /api/register endpoint already uses RATE_LIMIT_KV (3 requests/hr, 20/day per IP).
+Rate limiting silently skips when the binding is absent, so this does not block launch —
+it is a post-launch hardening step.
+
+---
+
+## OG Image
+Replace the placeholder public/og-image.jpg with a real 1200×630 asset.
+Used for Open Graph and Twitter card previews when the site URL is shared.
+
+---
+
+## Cloudflare Web Analytics
+Add the Cloudflare Web Analytics beacon to src/layouts/Base.astro.
+Cookieless, no PDPA/consent banner required.
+Beacon snippet is available in the Cloudflare dashboard under Analytics → Web Analytics.

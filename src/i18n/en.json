@@ -36,9 +36,10 @@
     "heading": "How It Works",
     "feesNote": "Licensing fees apply to all public viewings. Fee details are provided with your authorisation package.",
     "steps": [
-      { "title": "Submit Your Registration", "desc": "Complete the online form with your organisation and venue details." },
-      { "title": "TSA Reviews Your Application", "desc": "Our team will review your venue, scope, and intended audience." },
-      { "title": "Receive Your Written Authorisation", "desc": "Receive your official written authorisation, applicable licensing fee details, and commercial terms." },
+      { "title": "Submit Registration Online", "desc": "Complete the online form with your organisation and venue details." },
+      { "title": "TSA Reviews Application", "desc": "Our team will review your venue, scope, and intended audience." },
+      { "title": "Complete Payment", "desc": "Pay the applicable licensing fee to confirm your public viewing authorisation." },
+      { "title": "Receive Written Authorisation", "desc": "Receive your official written authorisation and commercial terms." },
       { "title": "Host Your Viewing", "desc": "Compliant, supported, and eligible for TSA promotional channels." }
     ]
   },
