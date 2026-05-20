@@ -182,7 +182,7 @@ const firstMatchDate = new Date('2026-06-11T00:00:00Z');
 
   .hero-countdown {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 1rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(245, 247, 250, 0.08);
@@ -204,7 +204,7 @@ const firstMatchDate = new Date('2026-06-11T00:00:00Z');
   }
 </style>
 
-<script define:vars={{ firstMatchTimestamp: firstMatchDate.getTime() }}>
+<script is:inline define:vars={{ firstMatchTimestamp: firstMatchDate.getTime() }}>
   const el = document.getElementById('days-count');
   if (el) {
     const diff = firstMatchTimestamp - Date.now();
