@@ -34,10 +34,11 @@
   },
   "howItWorks": {
     "heading": "How It Works",
+    "feesNote": "Licensing fees apply to all public viewings. Fee details are provided with your authorisation package.",
     "steps": [
       { "title": "Submit Your Registration", "desc": "Complete the online form with your organisation and venue details." },
       { "title": "TSA Reviews Your Application", "desc": "Our team will review your venue, scope, and intended audience." },
-      { "title": "Receive Your Written Authorisation", "desc": "Get your official written authorisation and licensing terms." },
+      { "title": "Receive Your Written Authorisation", "desc": "Receive your official written authorisation, applicable licensing fee details, and commercial terms." },
       { "title": "Host Your Viewing", "desc": "Compliant, supported, and eligible for TSA promotional channels." }
     ]
   },
@@ -46,6 +47,7 @@
     "step1": {
       "headline": "Let's get your public viewing approved",
       "subhead": "About 3 minutes. We'll come back to you within 3 working days.",
+      "feesNote": "Licensing fees apply. Details are confirmed with your authorisation.",
       "cta": "Start"
     },
     "step2": {

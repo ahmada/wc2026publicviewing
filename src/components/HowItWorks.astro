@@ -33,6 +33,7 @@ const t = useTranslations(lang);
 
     <div class="hiw-cta reveal">
       <a href="#register" class="btn-primary">{t('hero.ctaPrimary')}</a>
+      <p class="hiw-fees-note">{t('howItWorks.feesNote')}</p>
     </div>
   </div>
 </section>
@@ -122,5 +123,11 @@ const t = useTranslations(lang);
     margin-top: 3rem;
     padding-top: 2rem;
     border-top: 1px solid var(--color-border);
+  }
+  .hiw-fees-note {
+    margin-top: 0.875rem;
+    font-size: 0.78rem;
+    color: var(--color-muted);
+    letter-spacing: 0.02em;
   }
 </style>
