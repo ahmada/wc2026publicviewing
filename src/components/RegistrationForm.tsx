@@ -136,9 +136,6 @@ function StepWelcome({ lang, onNext }: { lang: Lang; onNext: () => void }) {
       <p style={{ color: 'var(--color-muted)', fontSize: '0.95rem', marginBottom: '2.5rem', maxWidth: '380px', margin: '0 auto 1.25rem' }}>
         {t(lang, 'form.step1.subhead')}
       </p>
-      <p style={{ fontSize: '0.72rem', color: 'var(--color-muted)', margin: '0 auto 2.5rem', maxWidth: '340px', letterSpacing: '0.02em', opacity: 0.7 }}>
-        {t(lang, 'form.step1.feesNote')}
-      </p>
       <button onClick={onNext} class="btn-primary" style={{ margin: '0 auto' }}>
         {t(lang, 'form.step1.cta')}
       </button>

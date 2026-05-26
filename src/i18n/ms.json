@@ -7,7 +7,7 @@
   "hero": {
     "eyebrow": "PENGENDALI HAK KOMERSIAL RASMI — MALAYSIA",
     "headline": "Hos Tontonan Awam FIFA World Cup 2026™ di Malaysia",
-    "subhead": "Semua tayangan awam Kejohanan di Malaysia memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia. Daftar di bawah untuk memulakan proses pelesenan anda.",
+    "subhead": "Semua tayangan awam Kejohanan di Malaysia memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia. Daftar di bawah untuk memulakan proses.",
     "ctaPrimary": "Mohon Kebenaran Tontonan Awam",
     "ctaSecondary": "Hubungi Kami di WhatsApp",
     "countdownLabel": "Hari Sehingga Perlawanan Pertama"
@@ -34,7 +34,7 @@
   },
   "howItWorks": {
     "heading": "Bagaimana Ia Berfungsi",
-    "feesNote": "Yuran pelesenan dikenakan untuk semua tontonan awam. Butiran yuran disertakan bersama pakej kebenaran anda.",
+    "feesNote": "Kebenaran diberikan berdasarkan pematuhan terma dan syarat yang ditetapkan oleh Total Sports Asia Sdn Bhd mengikut keperluan FIFA.",
     "steps": [
       { "title": "Hantar Pendaftaran Dalam Talian", "desc": "Lengkapkan borang dalam talian dengan butiran organisasi dan tempat anda." },
       { "title": "TSA Menyemak Permohonan", "desc": "Pasukan kami akan menyemak tempat, skop, dan penonton yang dimaksudkan." },
@@ -48,7 +48,6 @@
     "step1": {
       "headline": "Mari dapatkan kelulusan tontonan awam anda",
       "subhead": "Kira-kira 3 minit. Kami akan menghubungi anda dalam masa 3 hari bekerja.",
-      "feesNote": "Yuran pelesenan dikenakan. Butiran akan disahkan bersama kebenaran anda.",
       "cta": "Mula"
     },
     "step2": {
@@ -171,10 +170,6 @@
         "a": "Tontonan awam ialah sebarang tayangan terancang perlawanan FIFA World Cup 2026 di mana acara tersebut dipromosikan atau bertikut, di mana tempat atau ruang tertentu disediakan khusus untuk menonton perlawanan, atau di mana pengaktifan komersial dilampirkan. Ini termasuk pusat beli-belah, zon peminat, dataran awam, zon limpahan stadium, skrin luar, serta acara korporat atau komuniti."
       },
       {
-        "q": "Berapakah kos kebenaran tersebut?",
-        "a": "Yuran pelesenan berbeza bergantung pada jenis tempat, kapasiti, dan skop acara. Butiran yuran akan diberikan setelah permohonan anda disemak dan diluluskan. Menghantar pendaftaran tidak mengikat anda kepada sebarang pembayaran."
-      },
-      {
         "q": "Berapa lama proses ini mengambil masa?",
         "a": "Pasukan kami menyemak semua permohonan dalam masa 3 hari bekerja selepas penyerahan. Setelah diluluskan, anda akan menerima kebenaran bertulis dan syarat komersial melalui e-mel."
       },
@@ -188,7 +183,7 @@
       },
       {
         "q": "Saya telah menghantar permohonan. Apa yang berlaku seterusnya?",
-        "a": "Anda akan menerima e-mel pengesahan bersama ID rujukan anda. Ahli pasukan Total Sports Asia akan menghubungi anda dalam masa 3 hari bekerja untuk membincangkan permohonan anda, yuran yang berkenaan, dan langkah seterusnya."
+        "a": "Anda akan menerima e-mel pengesahan bersama ID rujukan anda. Ahli pasukan Total Sports Asia akan menghubungi anda dalam masa 3 hari bekerja untuk membincangkan permohonan anda dan langkah seterusnya."
       }
     ]
   },

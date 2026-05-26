@@ -7,7 +7,7 @@
   "hero": {
     "eyebrow": "OFFICIAL COMMERCIAL RIGHTS OPERATOR — MALAYSIA",
     "headline": "Host a FIFA World Cup 2026™ Public Viewing in Malaysia",
-    "subhead": "All public screenings of the Tournament in Malaysia require prior written authorization from Total Sports Asia. Register below to begin your licensing process.",
+    "subhead": "All public screenings of the Tournament in Malaysia require prior written authorization from Total Sports Asia. Register below to begin the process.",
     "ctaPrimary": "Apply for a Public Viewing Authorisation",
     "ctaSecondary": "Talk to Us on WhatsApp",
     "countdownLabel": "Days Until the First Match"
@@ -34,7 +34,7 @@
   },
   "howItWorks": {
     "heading": "How It Works",
-    "feesNote": "Licensing fees apply to all public viewings. Fee details are provided with your authorisation package.",
+    "feesNote": "Authorisation is granted based on compliance with terms and conditions set by Total Sports Asia Sdn Bhd based on FIFA requirements.",
     "steps": [
       { "title": "Submit Registration Online", "desc": "Complete the online form with your organisation and venue details." },
       { "title": "TSA Reviews Application", "desc": "Our team will review your venue, scope, and intended audience." },
@@ -48,7 +48,6 @@
     "step1": {
       "headline": "Let's get your public viewing approved",
       "subhead": "About 3 minutes. We'll come back to you within 3 working days.",
-      "feesNote": "Licensing fees apply. Details are confirmed with your authorisation.",
       "cta": "Start"
     },
     "step2": {
@@ -171,10 +170,6 @@
         "a": "A public viewing is any organised screening of FIFA World Cup 2026 matches where the event is promoted or ticketed, where a specific venue or space is set up primarily for watching the matches, or where a commercial activation is attached. This includes malls, fan zones, public squares, stadium overflow zones, outdoor screens, and corporate or community events."
       },
       {
-        "q": "How much does the authorisation cost?",
-        "a": "Licensing fees vary depending on the venue type, capacity, and scope of the event. Fee details are provided once your application has been reviewed and approved. Submitting a registration does not commit you to any payment."
-      },
-      {
         "q": "How long does the process take?",
         "a": "Our team reviews all applications within 3 working days of submission. Once approved, you will receive your written authorisation and commercial terms by email."
       },
@@ -188,7 +183,7 @@
       },
       {
         "q": "I have already submitted. What happens next?",
-        "a": "You will receive a confirmation email with your reference ID. A member of the Total Sports Asia team will contact you within 3 working days to discuss your application, applicable fees, and next steps."
+        "a": "You will receive a confirmation email with your reference ID. A member of the Total Sports Asia team will contact you within 3 working days to discuss your application and next steps."
       }
     ]
   },
