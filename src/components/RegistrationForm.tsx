@@ -669,7 +669,9 @@ export default function RegistrationForm({ lang }: Props) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      const json = await res.json() as { ok: boolean; referenceId?: string; code?: string };
+
+      let json: { ok: boolean; referenceId?: string; code?: string } = { ok: false };
+      try { json = await res.json(); } catch {}
 
       if (!res.ok) {
         if (json.code === 'RATE_LIMITED') setError(t(lang, 'form.errorRateLimit'));

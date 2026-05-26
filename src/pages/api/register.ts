@@ -1,12 +1,14 @@
 export const prerender = false;
 
 import type { APIRoute } from 'astro';
+import { env as cfEnv } from 'cloudflare:workers';
 import { RegistrationSchema } from '../../types/registration';
 import { verifyTurnstile } from '../../lib/turnstile';
 import { checkRateLimit } from '../../lib/rate-limit';
 import { sendEmail } from '../../lib/email/index';
 import { buildNotificationEmail } from '../../lib/email/templates/notification';
 import { buildConfirmationEmail } from '../../lib/email/templates/confirmation';
+import { appendRegistrationToSheet } from '../../lib/sheets';
 
 const ALLOWED_ORIGINS = [
   'https://publicviewing.totalsportsasia.com',
@@ -24,7 +26,7 @@ function json(data: unknown, status = 200) {
   });
 }
 
-export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
+export const POST: APIRoute = async ({ request, clientAddress }) => {
   // Method guard
   if (request.method !== 'POST') return json({ ok: false, code: 'METHOD_NOT_ALLOWED' }, 405);
 
@@ -60,12 +62,9 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
   }
   const data = parsed.data;
 
-  // Get Cloudflare env + bindings
-  const runtime = (locals as App.Locals).runtime;
-  const env = runtime?.env as Env | undefined;
-
   // Turnstile verification
   const ip = clientAddress ?? request.headers.get('cf-connecting-ip') ?? '0.0.0.0';
+  const env = cfEnv as Env | undefined;
   const turnstileSecret = env?.TURNSTILE_SECRET_KEY ?? import.meta.env.TURNSTILE_SECRET_KEY ?? '';
   const turnstileOk = await verifyTurnstile(data.cfTurnstileToken, ip, turnstileSecret);
   if (!turnstileOk) {
@@ -96,18 +95,25 @@ export const POST: APIRoute = async ({ request, locals, clientAddress }) => {
     EMAIL_PROVIDER: env?.EMAIL_PROVIDER ?? import.meta.env.EMAIL_PROVIDER ?? 'resend',
   };
 
-  // Send both emails (non-blocking — don't fail registration if one email fails)
-  const [notifResult, confirmResult] = await Promise.allSettled([
+  const sheetsWebhookUrl = env?.GOOGLE_SHEETS_WEBHOOK_URL ?? import.meta.env.GOOGLE_SHEETS_WEBHOOK_URL ?? '';
+  const sheetsSecret = env?.GOOGLE_SHEETS_SECRET ?? import.meta.env.GOOGLE_SHEETS_SECRET ?? '';
+
+  // Send emails + sheet write (non-blocking — don't fail registration if any of these fail)
+  const [notifResult, confirmResult, sheetsResult] = await Promise.allSettled([
     sendEmail({ to: notificationEmail, subject: notification.subject, html: notification.html, text: notification.text }, emailEnv),
     sendEmail({ to: data.email, subject: confirmation.subject, html: confirmation.html, text: confirmation.text }, emailEnv),
+    sheetsWebhookUrl ? appendRegistrationToSheet(data, fullRef, sheetsWebhookUrl, sheetsSecret) : Promise.resolve(),
   ]);
 
-  // Log email failures without exposing PII
+  // Log failures without exposing PII
   if (notifResult.status === 'rejected') {
     console.error('[register] notification email failed:', notifResult.reason?.message);
   }
   if (confirmResult.status === 'rejected') {
     console.error('[register] confirmation email failed:', confirmResult.reason?.message);
+  }
+  if (sheetsResult.status === 'rejected') {
+    console.error('[register] sheets write failed:', sheetsResult.reason?.message);
   }
 
   return json({ ok: true, referenceId: fullRef });

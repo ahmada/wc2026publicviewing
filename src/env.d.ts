@@ -8,12 +8,7 @@ interface Env {
   EMAIL_PROVIDER: string;
   TURNSTILE_SECRET_KEY: string;
   RATE_LIMIT_KV: KVNamespace;
+  GOOGLE_SHEETS_WEBHOOK_URL: string;
+  GOOGLE_SHEETS_SECRET: string;
 }
 
-declare namespace App {
-  interface Locals {
-    runtime: {
-      env: Env;
-    };
-  }
-}

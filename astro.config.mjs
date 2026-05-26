@@ -7,7 +7,10 @@ import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
   output: 'server',
-  adapter: cloudflare({ prerenderEnvironment: 'node' }),
+  // configPath passes wrangler.toml to the Cloudflare vite plugin so dev mode
+  // workerd picks up compatibility_flags = ["nodejs_compat"] — without it, the
+  // module runner in workerd fails to load CJS deps like picomatch.
+  adapter: cloudflare({ prerenderEnvironment: 'node', configPath: 'wrangler.toml' }),
   integrations: [preact(), sitemap()],
   vite: {
     plugins: [tailwindcss(), {
@@ -31,6 +34,14 @@ export default defineConfig({
       tsconfigPaths: false,
       alias: {
         cookie: fileURLToPath(new URL('./src/shims/cookie.js', import.meta.url)),
+      },
+    },
+    // picomatch is CJS-only. With nodejs_compat enabled (via wrangler.toml configPath),
+    // the workerd module runner can load it natively via import() without Vite's
+    // __commonJSMin wrapper which breaks in workerd's eval context.
+    ssr: {
+      optimizeDeps: {
+        exclude: ['picomatch'],
       },
     },
   },
