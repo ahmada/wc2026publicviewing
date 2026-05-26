@@ -19,6 +19,12 @@ if (!existsSync(path)) {
 
 const config = JSON.parse(readFileSync(path, 'utf-8'));
 
+// Strip configPath / userConfigPath — these point back to root wrangler.toml which
+// wrangler merges at deploy time. That merge re-introduces pages_build_output_dir,
+// causing wrangler to create a reserved ASSETS binding and break the Worker deploy.
+delete config.configPath;
+delete config.userConfigPath;
+
 // Remove KV namespaces with no id (phantom entries with no real resource)
 if (Array.isArray(config.kv_namespaces)) {
   config.kv_namespaces = config.kv_namespaces.filter((kv) => kv.id);
