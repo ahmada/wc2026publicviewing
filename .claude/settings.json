@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/kazi/claude/projects/fifapublicviewing/tasks/plans)",
+      "Bash(cp /Users/kazi/.claude/plans/consider-designing-a-system-jiggly-aho.md /Users/kazi/claude/projects/fifapublicviewing/tasks/plans/authorisation-system.md)"
+    ]
+  }
+}

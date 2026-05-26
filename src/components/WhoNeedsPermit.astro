@@ -19,17 +19,6 @@ const t = useTranslations(lang);
     <h2 class="who-heading heading-accent reveal">{t('who.heading')}</h2>
 
     <div class="who-grid">
-      <!-- Hospitality -->
-      <article class="who-card reveal">
-        <div class="who-icon" aria-hidden="true">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 22V8l9-6 9 6v14"/><path d="M9 22v-4h6v4"/><rect x="9" y="10" width="2" height="3"/><rect x="13" y="10" width="2" height="3"/>
-          </svg>
-        </div>
-        <h3 class="who-card-title">{t('who.hospitality.title')}</h3>
-        <p class="who-card-desc">{t('who.hospitality.desc')}</p>
-      </article>
-
       <!-- Venues -->
       <article class="who-card reveal">
         <div class="who-icon" aria-hidden="true">
@@ -84,9 +73,6 @@ const t = useTranslations(lang);
   }
   @media (min-width: 640px) {
     .who-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (min-width: 960px) {
-    .who-grid { grid-template-columns: repeat(3, 1fr); }
   }
   .who-card {
     background: var(--color-navy);

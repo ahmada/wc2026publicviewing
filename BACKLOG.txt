@@ -21,6 +21,21 @@ Used for Open Graph and Twitter card previews when the site URL is shared.
 
 ---
 
+## WhatsApp Business Automation (WATI + WhatsApp Flows)
+Build an automated WhatsApp registration flow that collects the same information as the web form,
+using WATI as the BSP and WhatsApp Flows for the native in-chat form experience.
+
+Steps:
+1. Sign up at wati.io and migrate the existing WhatsApp Business number
+2. Build the registration flow in WATI's flow builder (9 equivalent steps)
+3. Point WATI's webhook at /api/register so submissions feed the same pipeline
+4. Test end-to-end: WhatsApp submission → Google Sheet row + confirmation emails
+
+Context: Existing /api/register endpoint and Google Sheets integration are already in place.
+WATI webhook payload will need mapping to match the RegistrationSchema in src/types/registration.ts.
+
+---
+
 ## Cloudflare Web Analytics
 Add the Cloudflare Web Analytics beacon to src/layouts/Base.astro.
 Cookieless, no PDPA/consent banner required.

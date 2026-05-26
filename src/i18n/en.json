@@ -15,7 +15,7 @@
   "compliance": {
     "badge": "LICENSED RIGHTS OPERATOR",
     "heading": "Public viewings require written permission",
-    "body": "Under FIFA regulations, any public exhibition of FIFA World Cup 2026 matches in Malaysia — including in restaurants, cafés, bars, hotels, malls, fan zones, public squares, stadium overflow, corporate events, and ticketed venues — requires prior written authorization from Total Sports Asia as the licensed commercial rights operator. Unauthorized public screenings may result in enforcement action under Malaysian law and FIFA's commercial rights framework."
+    "body": "Under FIFA regulations, any public exhibition of FIFA World Cup 2026 matches in Malaysia — including in malls, fan zones, public squares, stadium overflow, corporate events, and ticketed venues — requires prior written authorization from Total Sports Asia as the licensed commercial rights operator. Unauthorized public screenings may result in enforcement action under Malaysian law and FIFA's commercial rights framework."
   },
   "who": {
     "heading": "Who Needs Authorisation?",
@@ -158,6 +158,39 @@
     "errorRateLimit": "Too many submissions. Please try again later.",
     "errorTurnstile": "Please complete the security check above before submitting.",
     "selectPlaceholder": "-- Select --"
+  },
+  "faq": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Do F&B outlets, restaurants, and cafés need authorisation?",
+        "a": "No. F&B outlets, restaurants, cafés, and bars are not required to obtain authorisation from Total Sports Asia to screen FIFA World Cup 2026 matches. Authorisation is required for venues and public spaces hosting dedicated public viewings, and for corporate events."
+      },
+      {
+        "q": "What counts as a public viewing that requires authorisation?",
+        "a": "A public viewing is any organised screening of FIFA World Cup 2026 matches where the event is promoted or ticketed, where a specific venue or space is set up primarily for watching the matches, or where a commercial activation is attached. This includes malls, fan zones, public squares, stadium overflow zones, outdoor screens, and corporate or community events."
+      },
+      {
+        "q": "How much does the authorisation cost?",
+        "a": "Licensing fees vary depending on the venue type, capacity, and scope of the event. Fee details are provided once your application has been reviewed and approved. Submitting a registration does not commit you to any payment."
+      },
+      {
+        "q": "How long does the process take?",
+        "a": "Our team reviews all applications within 3 working days of submission. Once approved, you will receive your written authorisation and commercial terms by email."
+      },
+      {
+        "q": "Can I screen matches before I receive written authorisation?",
+        "a": "No. Screening matches without prior written authorisation from Total Sports Asia is a breach of FIFA's commercial rights framework and may result in enforcement action. Please ensure your authorisation is in place before your event."
+      },
+      {
+        "q": "Do community organisations and NGOs need authorisation?",
+        "a": "Yes. Any organisation — including community groups, NGOs, associations, and government bodies — hosting a dedicated public viewing event requires written authorisation, regardless of whether the event is free or ticketed."
+      },
+      {
+        "q": "I have already submitted. What happens next?",
+        "a": "You will receive a confirmation email with your reference ID. A member of the Total Sports Asia team will contact you within 3 working days to discuss your application, applicable fees, and next steps."
+      }
+    ]
   },
   "whatsapp": {
     "heading": "Prefer to Talk It Through?",

@@ -15,7 +15,7 @@
   "compliance": {
     "badge": "PENGENDALI HAK BERLESEN",
     "heading": "Tontonan awam memerlukan kebenaran bertulis",
-    "body": "Di bawah peraturan FIFA, mana-mana tayangan awam perlawanan FIFA World Cup 2026 di Malaysia — termasuk di restoran, kafe, bar, hotel, pusat beli-belah, zon peminat, ruang komuniti, acara korporat, dan tempat bertikut — memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia sebagai pengendali hak komersial berlesen. Tayangan awam tanpa kebenaran boleh mengakibatkan tindakan penguatkuasaan di bawah undang-undang Malaysia dan rangka kerja hak komersial FIFA."
+    "body": "Di bawah peraturan FIFA, mana-mana tayangan awam perlawanan FIFA World Cup 2026 di Malaysia — termasuk di pusat beli-belah, zon peminat, dataran awam, limpahan stadium, acara korporat, dan tempat bertikut — memerlukan kebenaran bertulis terlebih dahulu daripada Total Sports Asia sebagai pengendali hak komersial berlesen. Tayangan awam tanpa kebenaran boleh mengakibatkan tindakan penguatkuasaan di bawah undang-undang Malaysia dan rangka kerja hak komersial FIFA."
   },
   "who": {
     "heading": "Siapa Yang Memerlukan Kebenaran?",
@@ -158,6 +158,39 @@
     "errorRateLimit": "Terlalu banyak permohonan. Sila cuba lagi sebentar lagi.",
     "errorTurnstile": "Sila lengkapkan semakan keselamatan di atas sebelum menghantar.",
     "selectPlaceholder": "-- Pilih --"
+  },
+  "faq": {
+    "heading": "Soalan Lazim",
+    "items": [
+      {
+        "q": "Adakah outlet F&B, restoran, dan kafe memerlukan kebenaran?",
+        "a": "Tidak. Outlet F&B, restoran, kafe, dan bar tidak dikehendaki mendapatkan kebenaran daripada Total Sports Asia untuk menayangkan perlawanan FIFA World Cup 2026. Kebenaran diperlukan untuk tempat dan ruang awam yang menganjurkan tontonan awam khusus, serta acara korporat."
+      },
+      {
+        "q": "Apakah yang dimaksudkan dengan tontonan awam yang memerlukan kebenaran?",
+        "a": "Tontonan awam ialah sebarang tayangan terancang perlawanan FIFA World Cup 2026 di mana acara tersebut dipromosikan atau bertikut, di mana tempat atau ruang tertentu disediakan khusus untuk menonton perlawanan, atau di mana pengaktifan komersial dilampirkan. Ini termasuk pusat beli-belah, zon peminat, dataran awam, zon limpahan stadium, skrin luar, serta acara korporat atau komuniti."
+      },
+      {
+        "q": "Berapakah kos kebenaran tersebut?",
+        "a": "Yuran pelesenan berbeza bergantung pada jenis tempat, kapasiti, dan skop acara. Butiran yuran akan diberikan setelah permohonan anda disemak dan diluluskan. Menghantar pendaftaran tidak mengikat anda kepada sebarang pembayaran."
+      },
+      {
+        "q": "Berapa lama proses ini mengambil masa?",
+        "a": "Pasukan kami menyemak semua permohonan dalam masa 3 hari bekerja selepas penyerahan. Setelah diluluskan, anda akan menerima kebenaran bertulis dan syarat komersial melalui e-mel."
+      },
+      {
+        "q": "Bolehkah saya menayangkan perlawanan sebelum menerima kebenaran bertulis?",
+        "a": "Tidak. Menayangkan perlawanan tanpa kebenaran bertulis terlebih dahulu daripada Total Sports Asia adalah pelanggaran rangka kerja hak komersial FIFA dan boleh mengakibatkan tindakan penguatkuasaan. Sila pastikan kebenaran anda telah diperoleh sebelum acara anda."
+      },
+      {
+        "q": "Adakah organisasi komuniti dan NGO memerlukan kebenaran?",
+        "a": "Ya. Mana-mana organisasi — termasuk kumpulan komuniti, NGO, persatuan, dan badan kerajaan — yang menganjurkan acara tontonan awam khusus memerlukan kebenaran bertulis, tanpa mengira sama ada acara tersebut percuma atau bertikut."
+      },
+      {
+        "q": "Saya telah menghantar permohonan. Apa yang berlaku seterusnya?",
+        "a": "Anda akan menerima e-mel pengesahan bersama ID rujukan anda. Ahli pasukan Total Sports Asia akan menghubungi anda dalam masa 3 hari bekerja untuk membincangkan permohonan anda, yuran yang berkenaan, dan langkah seterusnya."
+      }
+    ]
   },
   "whatsapp": {
     "heading": "Ingin Berbincang Dahulu?",
