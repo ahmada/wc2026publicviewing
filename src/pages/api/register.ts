@@ -11,6 +11,7 @@ import { buildConfirmationEmail } from '../../lib/email/templates/confirmation';
 import { appendRegistrationToSheet } from '../../lib/sheets';
 
 const ALLOWED_ORIGINS = [
+  'https://wcmalaysia.totalsportsasia.com',
   'https://www.totalsportsasia.com',
   'https://publicviewing.totalsportsasia.com',
   'https://2026wcpublicviewing.aasil.workers.dev',
