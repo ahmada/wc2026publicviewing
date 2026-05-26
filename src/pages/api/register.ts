@@ -12,6 +12,7 @@ import { appendRegistrationToSheet } from '../../lib/sheets';
 
 const ALLOWED_ORIGINS = [
   'https://publicviewing.totalsportsasia.com',
+  'https://2026wcpublicviewing.aasil.workers.dev',
   'http://localhost:4321',
   'http://localhost:3000',
 ];
