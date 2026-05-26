@@ -19,7 +19,7 @@ const t = useTranslations(lang);
     <h2 class="hiw-heading heading-accent reveal">{t('howItWorks.heading')}</h2>
 
     <div class="hiw-grid">
-      {[0, 1, 2, 3, 4].map((i) => (
+      {[0, 1, 2, 3].map((i) => (
         <div class="hiw-step reveal">
           <div class="hiw-step-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</div>
           <div class="hiw-step-content">
@@ -68,7 +68,7 @@ const t = useTranslations(lang);
     .hiw-grid { grid-template-columns: repeat(2, 1fr); gap: 0 3rem; }
   }
   @media (min-width: 1024px) {
-    .hiw-grid { grid-template-columns: repeat(5, 1fr); }
+    .hiw-grid { grid-template-columns: repeat(4, 1fr); }
   }
   .hiw-step {
     position: relative;
