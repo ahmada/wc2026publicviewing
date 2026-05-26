@@ -11,7 +11,7 @@ export function createResendProvider(apiKey: string): EmailProvider {
         },
         body: JSON.stringify({
           from: payload.from,
-          to: [payload.to],
+          to: payload.to.split(',').map((e) => e.trim()).filter(Boolean),
           subject: payload.subject,
           html: payload.html,
           text: payload.text,

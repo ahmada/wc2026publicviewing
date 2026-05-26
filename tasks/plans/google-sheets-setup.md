@@ -12,7 +12,7 @@ Follow these steps once to connect the registration form to a Google Sheet.
 4. In row 1, paste these 26 column headers exactly:
 
 ```
-Reference ID | Submitted At | Language | Full Name | Position | Email | Phone | Org Name | Org Type | SSM Number | Venue Name | Venue Address | State | Capacity | Screen Setup | Matches Planned | Est. Audience | Entry Fee? | Sells F&B? | Sponsorship? | Applicant Notes | Status | Assigned To | Fee (MYR) | Follow-up Date | Internal Notes
+Reference ID | Submitted At | Language | Full Name | Position | Email | Phone | Org Name | Org Type | SSM Number | Venue Name | Venue Address | State | Capacity | Screen Setup | Matches Planned | Est. Audience | Entry Fee? | Sells F&B? | Sponsorship? | Applicant Notes | Status | Assigned To | Fee (MYR) | Follow-up Date | Internal Notes | Source
 ```
 
 5. **Freeze row 1**: View → Freeze → 1 row
@@ -75,6 +75,7 @@ function doPost(e) {
       '',      // Fee (MYR)
       '',      // Follow-up Date
       '',      // Internal Notes
+      '',      // Source — team fills in for commission tracking
     ]);
 
     return ContentService.createTextOutput(JSON.stringify({ ok: true }))
@@ -183,3 +184,4 @@ If no row appears, check the Cloudflare dev server logs for:
 | X | **Fee (MYR)** | **Team** |
 | Y | **Follow-up Date** | **Team** |
 | Z | **Internal Notes** | **Team** |
+| AA | **Source** | **Team** |

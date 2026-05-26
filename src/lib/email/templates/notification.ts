@@ -3,6 +3,7 @@ import type { RegistrationPayload } from '../../../types/registration';
 export function buildNotificationEmail(
   data: RegistrationPayload,
   referenceId: string,
+  sheetsUrl?: string,
 ): { subject: string; html: string; text: string } {
   const subject = `[TSA] New Public Viewing Registration — ${referenceId}`;
 
@@ -54,6 +55,12 @@ export function buildNotificationEmail(
         <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border:1px solid #1a2540;">
           ${tableRows}
         </table>
+        ${sheetsUrl ? `
+        <div style="margin-top:24px;text-align:center;">
+          <a href="${sheetsUrl}" style="display:inline-block;background:#c9a84c;color:#070c18;text-decoration:none;font-weight:700;font-size:13px;padding:12px 28px;letter-spacing:0.05em;">
+            Open in Google Sheets →
+          </a>
+        </div>` : ''}
         <p style="font-size:11px;color:#3a4560;margin-top:24px;text-align:center;">
           Automated notification from the TSA Public Viewing Registration portal.
         </p>
@@ -63,7 +70,10 @@ export function buildNotificationEmail(
 </body>
 </html>`;
 
-  const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n');
+  const text = [
+    ...rows.map(([k, v]) => `${k}: ${v}`),
+    ...(sheetsUrl ? ['', `Google Sheet: ${sheetsUrl}`] : []),
+  ].join('\n');
 
   return { subject, html, text };
 }

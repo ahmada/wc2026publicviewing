@@ -10,5 +10,6 @@ interface Env {
   RATE_LIMIT_KV: KVNamespace;
   GOOGLE_SHEETS_WEBHOOK_URL: string;
   GOOGLE_SHEETS_SECRET: string;
+  GOOGLE_SHEETS_URL: string;
 }
 

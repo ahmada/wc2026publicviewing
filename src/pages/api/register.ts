@@ -86,7 +86,8 @@ export const POST: APIRoute = async ({ request, clientAddress }) => {
   const fullRef = `TSA-${new Date().getUTCFullYear()}-${referenceId}`;
 
   // Build email content
-  const notification = buildNotificationEmail(data, fullRef);
+  const sheetsUrl = env?.GOOGLE_SHEETS_URL ?? import.meta.env.GOOGLE_SHEETS_URL ?? '';
+  const notification = buildNotificationEmail(data, fullRef, sheetsUrl);
   const confirmation = buildConfirmationEmail(data, fullRef);
 
   const notificationEmail = env?.NOTIFICATION_EMAIL ?? import.meta.env.NOTIFICATION_EMAIL ?? '';

@@ -10,7 +10,7 @@ export interface EmailProvider {
   send(payload: EmailPayload): Promise<void>;
 }
 
-const FROM_ADDRESS = 'register@totalsportsasia.com';
+const FROM_ADDRESS = 'onboarding@resend.dev';
 const FROM_NAME = 'Total Sports Asia';
 
 export async function sendEmail(
