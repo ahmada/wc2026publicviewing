@@ -35,5 +35,12 @@ if (config.previews?.kv_namespaces) {
 if (config.images) delete config.images;
 if (config.previews?.images) delete config.previews.images;
 
+// Remove pages_build_output_dir — inherited from wrangler.toml, causes wrangler deploy
+// to auto-create an ASSETS binding which is reserved and rejected in Pages projects
+if (config.pages_build_output_dir) delete config.pages_build_output_dir;
+
+// Remove any ASSETS binding (belt-and-suspenders)
+if (config.assets) delete config.assets;
+
 writeFileSync(path, JSON.stringify(config, null, 2));
 console.log('[postbuild] Cleaned dist/server/wrangler.json');
